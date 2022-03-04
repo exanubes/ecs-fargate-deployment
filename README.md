@@ -8,7 +8,7 @@ This repository is using AWS CDK v2 and is not compatible with AWS CDK v1 bootst
 
 ## Commands:
 
-Run the following commands for building, deploying and destroying the stacks
+Run the following commands inside `infrastructure` directory for building, deploying and destroying the stacks
 
 ```
 npm run build
