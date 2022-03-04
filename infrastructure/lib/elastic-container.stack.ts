@@ -25,7 +25,7 @@ interface Props extends StackProps {
 const CONTAINER_PORT = 8081
 
 export class ElasticContainerStack extends Stack {
-    constructor(scope: Construct, id: string, private readonly props: Props) {
+    constructor(scope: Construct, id: string, props: Props) {
         super(scope, id, props)
         const cluster = new Cluster(this, "exanubes-cluster", {
             vpc: props.vpc,
