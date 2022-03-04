@@ -1,14 +1,20 @@
-# Welcome to your CDK TypeScript project
+# ECS Fargate Deployment
 
-This is a blank project for TypeScript development with CDK.
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Repository from [exanubes.com](https://exanubes.com) for [Deploying ECS Fargate Application](https://exanubes.com/blog/deploying-ecs-fargate-application).
 
-## Useful commands
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+This repository is using AWS CDK v2 and is not compatible with AWS CDK v1 bootstrap stack.
+
+## Commands:
+
+Run the following commands for building, deploying and destroying the stacks
+
+```
+npm run build
+npm run cdk:deploy
+npm run cdk:destroy
+```
+
+
+Both of these commands use the `aws-cli sts` service to get the account id and aws IAM role `exanubes-cloudformation-access` in order to dynamically provide role arn. Make sure you're using the account you want to deploy the stacks to and that you have the role created either with the same name or different name and change the scripts in `package.json`.
