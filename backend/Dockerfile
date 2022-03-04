@@ -4,6 +4,8 @@ COPY . .
 
 RUN npm install && npm run build
 
-EXPOSE 3001
+EXPOSE 8081
 
-CMD node server/main.js
+ENTRYPOINT ["node"]
+
+CMD ["dist/main.js"]
